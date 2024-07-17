@@ -2,6 +2,7 @@ import { createTheme, ThemeProvider } from "@mui/material";
 import React, { ReactNode, useEffect, useState } from "react";
 import darkThemeOptions from "../styles/theme/DarkTheme";
 import { ThemeContext } from "../context/Theme";
+import lightThemeOptions from "../styles/theme/LightTheme";
 
 // interfaces
 interface ThemeProviderProps {
@@ -9,29 +10,36 @@ interface ThemeProviderProps {
 }
 
 // create theme
+
+// dark
 const darkTheme = createTheme(darkThemeOptions);
+const lightTheme = createTheme(lightThemeOptions);
 
 const ThemeProviders: React.FC<ThemeProviderProps> = ({ children }) => {
-  // States
+  // states
 
-  // Theme
+  // theme
   const [theme, setTheme] = useState("dark");
 
-  // Functions
+  //
+
+  let directionTheme = theme === "dark" ? darkTheme : lightTheme;
+
+  // functions
 
   // Toggle Theme
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
-    localStorage.setItem("mode", theme === "dark" ? "light" : "dark");
   };
 
-  // Effects
+  // effects
+
   useEffect(() => {
     setTheme(localStorage?.getItem("mode") ?? "dark");
   }, []);
 
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={directionTheme}>
       <ThemeContext.Provider value={[theme, toggleTheme]}>
         {children}
       </ThemeContext.Provider>
