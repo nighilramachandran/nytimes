@@ -2,13 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import PrivateRoutes from "./Routes";
-import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
-import darkThemeOptions from "./styles/theme/DarkTheme";
+import { CssBaseline } from "@mui/material";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import ThemeProviders from "./providers/ThemeProviders";
-
-// require("dotenv").config();
 
 // create root element
 const root = ReactDOM.createRoot(

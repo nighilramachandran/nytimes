@@ -2,9 +2,6 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AppThunk } from "../store";
 import { ArticleApiResponse, RequestStatus } from "../../interfaces";
 import { api } from "../../utils/api";
-import { AxiosResponse } from "axios";
-// import { taskItems as TaskItems } from "../../interfaces/Task";
-// import { v4 as uuidv4 } from "uuid";
 
 interface InitialState {
   status: RequestStatus;
