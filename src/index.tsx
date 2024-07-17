@@ -2,12 +2,14 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import PrivateRoutes from "./Routes";
+import { CssBaseline } from "@mui/material";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <CssBaseline enableColorScheme />
     <PrivateRoutes />
   </React.StrictMode>
 );
