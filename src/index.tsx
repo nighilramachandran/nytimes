@@ -5,12 +5,14 @@ import PrivateRoutes from "./Routes";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import darkThemeOptions from "./styles/theme/DarkTheme";
 
-// create theme
-const darkTheme = createTheme(darkThemeOptions);
-
+// create root element
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
+
+// create theme
+const darkTheme = createTheme(darkThemeOptions);
+
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={darkTheme}>
