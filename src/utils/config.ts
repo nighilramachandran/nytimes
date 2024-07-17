@@ -1,4 +1,4 @@
-import { headerSpacing } from "../interfaces/config";
+import { headerSpacing } from "../interfaces";
 
 // /header spacings
 export const HEADER_SPACINGS: headerSpacing = {

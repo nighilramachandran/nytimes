@@ -2,7 +2,7 @@ import { Theme } from "@emotion/react";
 import { SxProps } from "@mui/material";
 import { HEADER_SPACINGS } from "../../utils/config";
 import { CSSProperties } from "react";
-import { headerStylesProps } from "../../interfaces/styles";
+import { headerStylesProps } from "../../interfaces";
 
 // AppBar
 export const appBarStyles: SxProps<Theme> = {
