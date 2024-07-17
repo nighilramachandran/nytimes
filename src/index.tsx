@@ -4,21 +4,25 @@ import reportWebVitals from "./reportWebVitals";
 import PrivateRoutes from "./Routes";
 import { createTheme, CssBaseline, ThemeProvider } from "@mui/material";
 import darkThemeOptions from "./styles/theme/DarkTheme";
+import { Provider } from "react-redux";
+import { store } from "./redux/store";
+import ThemeProviders from "./providers/ThemeProviders";
+
+// require("dotenv").config();
 
 // create root element
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 
-// create theme
-const darkTheme = createTheme(darkThemeOptions);
-
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline enableColorScheme />
-      <PrivateRoutes />
-    </ThemeProvider>
+    <Provider store={store}>
+      <ThemeProviders>
+        <CssBaseline enableColorScheme />
+        <PrivateRoutes />
+      </ThemeProviders>
+    </Provider>
   </React.StrictMode>
 );
 

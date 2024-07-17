@@ -1,21 +1,21 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AppThunk } from "../store";
-import { RequestStatus } from "../../interfaces";
+import { ArticleApiResponse, RequestStatus } from "../../interfaces";
+import { api } from "../../utils/api";
+import { AxiosResponse } from "axios";
 // import { taskItems as TaskItems } from "../../interfaces/Task";
 // import { v4 as uuidv4 } from "uuid";
 
 interface InitialState {
   status: RequestStatus;
-  // taskItems: TaskItems[];
 }
 
 const initialState: InitialState = {
   status: "nothing",
-  // taskItems: [],
 };
 
-const TaskSlice = createSlice({
-  name: "Task",
+const ArticleSlice = createSlice({
+  name: "Article",
   initialState,
   reducers: {
     setStatus: (state, { payload }: PayloadAction<RequestStatus>) => {
@@ -61,39 +61,24 @@ const TaskSlice = createSlice({
   },
 });
 
-export const { setStatus } = TaskSlice.actions;
+export const { setStatus } = ArticleSlice.actions;
 
-// //add tasks
-// export const AddTaskFunc =
-//   (task: TaskItems): AppThunk =>
-//   async (dispatch) => {
-//     dispatch(setStatus("loading"));
-//     dispatch(AddTask(task));
-//     dispatch(setStatus("data"));
-//   };
+export const FetchPopularArticles = (): AppThunk => async (dispatch) => {
+  dispatch(setStatus("loading"));
+  try {
+    const { data } = await api.get<ArticleApiResponse>(
+      "svc/mostpopular/v2/viewed/1.json"
+    );
+    console.log("response", data);
 
-// //change the status
-// export const ChangeStatusFunc =
-//   (req: { id: string; isCompleted: boolean }): AppThunk =>
-//   async (dispatch) => {
-//     dispatch(setStatus("loading"));
-//     dispatch(ChangeStatus(req));
-//     dispatch(setStatus("data"));
-//   };
-// //Delete task
-// export const DeleteTaskFunc =
-//   (req: string): AppThunk =>
-//   async (dispatch) => {
-//     dispatch(setStatus("loading"));
-//     dispatch(DeleteTask(req));
-//     dispatch(setStatus("data"));
-//   };
-// //Delete task
-// export const UpdateTaskFunc =
-//   (task: TaskItems): AppThunk =>
-//   async (dispatch) => {
-//     dispatch(setStatus("loading"));
-//     dispatch(UpdateTask(task));
-//     dispatch(setStatus("data"));
-//   };
-export default TaskSlice;
+    // if (code == 0) {
+    //   // dispatch(fetchSecuritySettingsHistroy(data));
+    //   dispatch(setStatus("data"));
+    // } else {
+    //   dispatch(setStatus("error"));
+    // }
+  } catch {
+    dispatch(setStatus("error"));
+  }
+};
+export default ArticleSlice;
