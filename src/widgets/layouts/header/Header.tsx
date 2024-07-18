@@ -6,7 +6,7 @@ import {
   headerStyles,
   logoWrapperStyles,
 } from "../../../styles/header";
-import { ChangeThemeButton } from "../../../components/buttons/ChangeThemeButton";
+import { ChangeThemeButton } from "../../../components/Buttons/ChangeThemeButton";
 
 const Header: React.FC = () => {
   return (
