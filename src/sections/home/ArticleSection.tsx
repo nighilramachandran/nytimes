@@ -29,7 +29,7 @@ const ArticleSection: React.FC<articleSectionProps> = ({ articles }) => {
           const data = art?.media?.[0]?.["media-metadata"]?.[2];
 
           return (
-            <Grid item xs={12}>
+            <Grid item xs={12} key={art.id}>
               <Paper variant="outlined">
                 <Grid container spacing={2}>
                   <GridItemImage mediaData={data} />

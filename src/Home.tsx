@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "./redux/hooks";
 import { FetchPopularArticles } from "./redux/reducers/article";
 import CustomSelect from "./components/select/CustomSelect";
-import { Grid, Paper } from "@mui/material";
+import { Grid } from "@mui/material";
 import ArticleSection from "./sections/home/ArticleSection";
+import { LoadingBox } from "./components/loading-box";
 
 const Home: React.FC = () => {
   // states
@@ -29,18 +30,20 @@ const Home: React.FC = () => {
   };
 
   return (
-    <Grid container spacing={3}>
-      <Grid item sx={{ marginLeft: "auto" }}>
-        <CustomSelect
-          options={periods}
-          defaultOption={defaultPeriod}
-          optionChange={(val) => handleOptionChange(val)}
-        />
+    <LoadingBox status={status === "data" ? "data" : "loading"}>
+      <Grid container spacing={3}>
+        <Grid item sx={{ marginLeft: "auto" }}>
+          <CustomSelect
+            options={periods}
+            defaultOption={defaultPeriod}
+            optionChange={(val) => handleOptionChange(val)}
+          />
+        </Grid>
+        <Grid item>
+          <ArticleSection articles={articles} />
+        </Grid>
       </Grid>
-      <Grid item>
-        <ArticleSection articles={articles} />
-      </Grid>
-    </Grid>
+    </LoadingBox>
   );
 };
 

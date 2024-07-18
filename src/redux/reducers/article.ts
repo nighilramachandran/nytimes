@@ -78,7 +78,6 @@ export const FetchPopularArticles =
       const { data } = await api.get<ArticleApiResponse>(
         `svc/mostpopular/v2/viewed/${param}.json`
       );
-      console.log("data", data);
       if (data.status === "OK") {
         dispatch(setArticles(data?.results));
         dispatch(setStatus("data"));
