@@ -1,3 +1,7 @@
+import { inputOverride } from "./Input";
+import { selectOverride } from "./Select";
+
 export const componetnsOverrides = {
-  // ...paperOverride,
+  ...inputOverride,
+  ...selectOverride,
 };
