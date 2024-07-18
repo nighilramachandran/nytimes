@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useAppDispatch, useAppSelector } from "./redux/hooks";
-import { FetchPopularArticles } from "./redux/reducers/article";
-import CustomSelect from "./components/select/CustomSelect";
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import { FetchPopularArticles } from "../redux/reducers/article";
+import CustomSelect from "../components/select/CustomSelect";
 import { Grid } from "@mui/material";
-import ArticleSection from "./sections/home/ArticleSection";
-import { LoadingBox } from "./components/loading-box";
+import ArticleSection from "../sections/home/ArticleSection";
+import { LoadingBox } from "../components/loading-box";
 
 const Home: React.FC = () => {
   // states

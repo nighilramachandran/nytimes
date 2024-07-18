@@ -1,6 +1,7 @@
 import React, { CSSProperties } from "react";
 import { ArticleResult, MediaMetadata } from "../../interfaces";
 import { Grid, Paper, Stack, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 // interfaces
 interface articleSectionProps {
@@ -22,14 +23,27 @@ const gridItemScripts: CSSProperties = {
 
 // article section
 const ArticleSection: React.FC<articleSectionProps> = ({ articles }) => {
+  // navigate
+  const navigate = useNavigate();
+
+  // function
+  const goToPage = (id: string) => {
+    navigate(`/${id}`);
+  };
   return (
-    <Grid container gap={5} sx={{ cursor: "pointer" }}>
+    <Grid container gap={5}>
       {articles?.length > 0 &&
         articles?.map((art) => {
           const data = art?.media?.[0]?.["media-metadata"]?.[2];
 
           return (
-            <Grid item xs={12} key={art.id}>
+            <Grid
+              item
+              xs={12}
+              key={art.id}
+              sx={{ cursor: "pointer" }}
+              onClick={() => goToPage(art.id.toString())}
+            >
               <Paper variant="outlined">
                 <Grid container spacing={2}>
                   <GridItemImage mediaData={data} />
