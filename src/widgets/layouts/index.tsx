@@ -1,12 +1,15 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./header/Header";
+import { Box, Container } from "@mui/material";
 
 const Layout: React.FC = () => {
   return (
     <>
       <Header />
-      <Outlet />
+      <Container sx={{ padding: "20px 0px" }}>
+        <Outlet />
+      </Container>
     </>
   );
 };
