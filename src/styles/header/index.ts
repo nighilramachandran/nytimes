@@ -28,4 +28,5 @@ export const logoWrapperStyles: CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  margin: "auto",
 };

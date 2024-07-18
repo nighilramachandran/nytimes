@@ -6,6 +6,7 @@ import {
   headerStyles,
   logoWrapperStyles,
 } from "../../../styles/header";
+import { ChangeThemeButton } from "../../../components/buttons/ChangeThemeButton";
 
 const Header: React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const Header: React.FC = () => {
         <Box sx={{ ...logoWrapperStyles }}>
           <NyLogo />
         </Box>
+        <ChangeThemeButton />
       </Toolbar>
     </AppBar>
   );
