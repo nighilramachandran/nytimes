@@ -4,12 +4,19 @@ export const typographyOverride: Components<Theme> = {
   MuiTypography: {
     styleOverrides: {
       root: ({ theme }) => ({
-        // fontWeight: "400px",
-        // fontSize: "12px",
+        fontWeight: "400px",
+        fontSize: "12px",
       }),
-      //   subtitle1: ({ theme }) => ({ color: theme.palette.text.secondary }),
-      //   subtitle2: ({ theme }) => ({ color: theme.palette.text.secondary, fontSize: ".8rem" }),
-      //   paragraph: () => ({ fontSize: "12px" }),
+      h2: ({ theme }) => ({
+        color: theme.palette.text.primary,
+        fontSize: "36px",
+        fontWeight: 700,
+      }),
+      body1: ({ theme }) => ({
+        color: theme.palette.text.primary,
+        fontSize: "26px",
+        fontWeight: 400,
+      }),
     },
     // variants: [
     //   {

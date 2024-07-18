@@ -30,7 +30,7 @@ const Home: React.FC = () => {
 
   return (
     <Grid container spacing={3}>
-      <Grid item>
+      <Grid item sx={{ marginLeft: "auto" }}>
         <CustomSelect
           options={periods}
           defaultOption={defaultPeriod}

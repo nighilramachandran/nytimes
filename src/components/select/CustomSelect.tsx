@@ -29,7 +29,7 @@ const CustomSelect: React.FC<customSlectProps> = ({
   };
   return (
     <FormControl sx={{ width: "200px" }}>
-      <InputLabel id="demo-simple-select-label">Select Time Period</InputLabel>
+      <InputLabel sx={{ color: "text.primary" }}>Select Time Period</InputLabel>
       <Select
         value={defaultOption}
         className="outlined-gradient"

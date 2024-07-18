@@ -14,9 +14,16 @@ const gridItemImageStyles: CSSProperties = {
   alignItems: "center",
 };
 
+const gridItemScripts: CSSProperties = {
+  justifyContent: "end",
+  gap: "15px",
+  height: "100%",
+};
+
+// article section
 const ArticleSection: React.FC<articleSectionProps> = ({ articles }) => {
   return (
-    <Grid container gap={3}>
+    <Grid container gap={5} sx={{ cursor: "pointer" }}>
       {articles?.length > 0 &&
         articles?.map((art) => {
           const data = art?.media?.[0]?.["media-metadata"]?.[2];
@@ -24,7 +31,7 @@ const ArticleSection: React.FC<articleSectionProps> = ({ articles }) => {
           return (
             <Grid item xs={12}>
               <Paper variant="outlined">
-                <Grid container>
+                <Grid container spacing={2}>
                   <GridItemImage mediaData={data} />
                   <GridItemScripts script={art} />
                 </Grid>
@@ -71,9 +78,9 @@ const GridItemImage = ({ mediaData }: gridItemImageProps) => {
 const GridItemScripts = ({ script }: scriptItemProps) => {
   return (
     <Grid item xs={12} md={7}>
-      <Stack>
-        <Typography>{script.title}</Typography>
-        <Typography>{script.abstract}</Typography>
+      <Stack sx={{ ...gridItemScripts }}>
+        <Typography variant="h2">{script.title}</Typography>
+        <Typography variant="body1">{script.abstract}</Typography>
       </Stack>
     </Grid>
   );
