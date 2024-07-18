@@ -17,23 +17,19 @@ const lightTheme = createTheme(lightThemeOptions);
 
 const ThemeProviders: React.FC<ThemeProviderProps> = ({ children }) => {
   // states
-
   // theme
   const [theme, setTheme] = useState("dark");
 
   // variables
-
   let directionTheme = theme === "dark" ? darkTheme : lightTheme;
 
   // functions
-
   // Toggle Theme
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
 
   // effects
-
   useEffect(() => {
     setTheme(localStorage?.getItem("mode") ?? "dark");
   }, []);
