@@ -7,7 +7,7 @@ const darkThemeOptions: ThemeOptions = {
     mode: "dark",
     text: {
       primary: "#FFFFFF",
-      secondary: "#000000",
+      secondary: "#B1B5C3",
     },
     background: {
       default: "#101010",
@@ -19,9 +19,7 @@ const darkThemeOptions: ThemeOptions = {
       main: "#d6357e",
     },
   },
-  // shape: { ...shapOverrides },
   typography: { ...typographyStylesOverrides, ...typographyOverride },
-
   components: {
     ...componetnsOverrides,
   },

@@ -15,21 +15,24 @@ export const typographyOverride: Components<Theme> = {
       body1: ({ theme }) => ({
         color: theme.palette.text.primary,
         fontSize: "26px",
-        fontWeight: 400,
+      }),
+      body2: ({ theme }) => ({
+        fontSize: "20px",
+        color: theme.palette.text.secondary,
       }),
     },
-    // variants: [
-    //   {
-    //     props: { color: "gradient" },
-    //     style: () => ({
-    //       background:
-    //         "-webkit-linear-gradient( #EF4652 0, #ff003e 25.21%, #e21a67 33.24%, #B04182 47.01%, #6352A0 67.09%)",
-    //       WebkitBackgroundClip: "text",
-    //       WebkitTextFillColor: "transparent",
-    //       backgroundClip: "text",
-    //       textFillColor: "transparent",
-    //     }),
-    //   },
-    // ],
+    variants: [
+      {
+        props: { color: "gradient" },
+        style: () => ({
+          background:
+            "-webkit-linear-gradient( #EF4652 0, #ff003e 25.21%, #e21a67 33.24%, #B04182 47.01%, #6352A0 67.09%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          textFillColor: "transparent",
+        }),
+      },
+    ],
   },
 };

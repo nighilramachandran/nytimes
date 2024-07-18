@@ -88,4 +88,16 @@ export const FetchPopularArticles =
       dispatch(setStatus("error"));
     }
   };
+
+export const FilterPopularArticleById =
+  (id: number): AppThunk =>
+  async (dispatch) => {
+    dispatch(setStatus("loading"));
+    try {
+      // dispatch(filterArticle({ id }));
+      dispatch(setStatus("data"));
+    } catch {
+      dispatch(setStatus("error"));
+    }
+  };
 export default ArticleSlice;
