@@ -60,22 +60,24 @@ const ArticleSlice = createSlice({
 
 export const { setStatus } = ArticleSlice.actions;
 
-export const FetchPopularArticles = (): AppThunk => async (dispatch) => {
-  dispatch(setStatus("loading"));
-  try {
-    const { data } = await api.get<ArticleApiResponse>(
-      "svc/mostpopular/v2/viewed/1.json"
-    );
-    console.log("response", data);
+export const FetchPopularArticles =
+  (param: string): AppThunk =>
+  async (dispatch) => {
+    dispatch(setStatus("loading"));
+    try {
+      const { data } = await api.get<ArticleApiResponse>(
+        `svc/mostpopular/v2/viewed/${param}.json`
+      );
+      console.log("data", data);
 
-    // if (code == 0) {
-    //   // dispatch(fetchSecuritySettingsHistroy(data));
-    //   dispatch(setStatus("data"));
-    // } else {
-    //   dispatch(setStatus("error"));
-    // }
-  } catch {
-    dispatch(setStatus("error"));
-  }
-};
+      // if (code == 0) {
+      //   // dispatch(fetchSecuritySettingsHistroy(data));
+      //   dispatch(setStatus("data"));
+      // } else {
+      //   dispatch(setStatus("error"));
+      // }
+    } catch {
+      dispatch(setStatus("error"));
+    }
+  };
 export default ArticleSlice;

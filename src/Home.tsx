@@ -15,8 +15,8 @@ const Home: React.FC = () => {
 
   // effects
   useEffect(() => {
-    dispatch(FetchPopularArticles());
-  }, [dispatch]);
+    dispatch(FetchPopularArticles(defaultPeriod));
+  }, [dispatch, defaultPeriod]);
 
   // functions
   const handleOptionChange = (val: string) => {
