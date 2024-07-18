@@ -11,10 +11,10 @@ interface Media {
   caption: string;
   copyright: string;
   approved_for_syndication: number;
-  media_metadata: MediaMetadata[];
+  "media-metadata": MediaMetadata[];
 }
 
-interface ArticleResult {
+export interface ArticleResult {
   uri: string;
   url: string;
   id: number;

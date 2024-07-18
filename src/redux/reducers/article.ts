@@ -1,14 +1,20 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { AppThunk } from "../store";
-import { ArticleApiResponse, RequestStatus } from "../../interfaces";
+import {
+  ArticleApiResponse,
+  ArticleResult,
+  RequestStatus,
+} from "../../interfaces";
 import { api } from "../../utils/api";
 
 interface InitialState {
   status: RequestStatus;
+  articles: ArticleResult[];
 }
 
 const initialState: InitialState = {
   status: "nothing",
+  articles: [],
 };
 
 const ArticleSlice = createSlice({
@@ -18,6 +24,10 @@ const ArticleSlice = createSlice({
     setStatus: (state, { payload }: PayloadAction<RequestStatus>) => {
       state.status = payload;
     },
+    setArticles: (state, { payload }: PayloadAction<ArticleResult[]>) => {
+      state.articles = payload;
+    },
+
     // AddTask: (state, { payload }: PayloadAction<TaskItems>) => {
     //   const existingIndex = state.taskItems.findIndex(
     //     (task) => task.title === payload.title
@@ -58,7 +68,7 @@ const ArticleSlice = createSlice({
   },
 });
 
-export const { setStatus } = ArticleSlice.actions;
+export const { setStatus, setArticles } = ArticleSlice.actions;
 
 export const FetchPopularArticles =
   (param: string): AppThunk =>
@@ -69,13 +79,12 @@ export const FetchPopularArticles =
         `svc/mostpopular/v2/viewed/${param}.json`
       );
       console.log("data", data);
-
-      // if (code == 0) {
-      //   // dispatch(fetchSecuritySettingsHistroy(data));
-      //   dispatch(setStatus("data"));
-      // } else {
-      //   dispatch(setStatus("error"));
-      // }
+      if (data.status === "OK") {
+        dispatch(setArticles(data?.results));
+        dispatch(setStatus("data"));
+      } else {
+        dispatch(setStatus("error"));
+      }
     } catch {
       dispatch(setStatus("error"));
     }
