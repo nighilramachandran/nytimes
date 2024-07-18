@@ -21,7 +21,7 @@ const ThemeProviders: React.FC<ThemeProviderProps> = ({ children }) => {
   // theme
   const [theme, setTheme] = useState("dark");
 
-  //
+  // variables
 
   let directionTheme = theme === "dark" ? darkTheme : lightTheme;
 

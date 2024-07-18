@@ -4,7 +4,7 @@ import { typographyStylesOverrides } from "./overrides/components/TypographyFont
 import { typographyOverride } from "./overrides/components/Typography";
 const lightThemeOptions: ThemeOptions = {
   palette: {
-    mode: "dark",
+    mode: "light",
     text: {
       primary: "#414141",
       secondary: "#B1B5C3",

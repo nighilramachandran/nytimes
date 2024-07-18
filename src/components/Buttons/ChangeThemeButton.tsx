@@ -8,6 +8,7 @@ export const ChangeThemeButton: React.FC = () => {
   // handle change
   const handleChange = () => {
     setThemeMode();
+    localStorage?.setItem("mode", themeMode);
   };
   return (
     <FormControlLabel
