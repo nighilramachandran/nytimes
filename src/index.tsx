@@ -6,6 +6,7 @@ import { CssBaseline } from "@mui/material";
 import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import ThemeProviders from "./providers/ThemeProviders";
+import MotionLazyContainer from "./components/animate/MotionLazyContainer";
 
 // create root element
 const root = ReactDOM.createRoot(
@@ -17,7 +18,9 @@ root.render(
   <Provider store={store}>
     <ThemeProviders>
       <CssBaseline enableColorScheme />
-      <PrivateRoutes />
+      <MotionLazyContainer>
+        <PrivateRoutes />
+      </MotionLazyContainer>
     </ThemeProviders>
   </Provider>
   // </React.StrictMode>
