@@ -1,4 +1,4 @@
 export * from "./State";
-export * from "./Config";
-export * from "./Styles";
+export * from "./config";
+export * from "./styles";
 export * from "./Article";
