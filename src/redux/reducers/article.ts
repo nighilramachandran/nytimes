@@ -10,11 +10,13 @@ import { api } from "../../utils/api";
 interface InitialState {
   status: RequestStatus;
   articles: ArticleResult[];
+  validPagesId: number[];
 }
 
 const initialState: InitialState = {
   status: "nothing",
   articles: [],
+  validPagesId: [],
 };
 
 const ArticleSlice = createSlice({
@@ -27,44 +29,9 @@ const ArticleSlice = createSlice({
     setArticles: (state, { payload }: PayloadAction<ArticleResult[]>) => {
       state.articles = payload;
     },
-
-    // AddTask: (state, { payload }: PayloadAction<TaskItems>) => {
-    //   const existingIndex = state.taskItems.findIndex(
-    //     (task) => task.title === payload.title
-    //   );
-
-    //   if (existingIndex !== -1) {
-    //     enqueueSnackbar(`Task with Title ${payload.title} already exist`, {
-    //       variant: "error",
-    //     });
-    //   } else {
-    //     const id = uuidv4();
-    //     const taskWithIdAndStatus = { ...payload, id, isCompleted: false };
-    //     state.taskItems.push(taskWithIdAndStatus);
-    //     enqueueSnackbar(`Task Added succesfully`, {
-    //       variant: "success",
-    //     });
-    //   }
-    // },
-    // ChangeStatus: (
-    //   state,
-    //   { payload }: PayloadAction<{ id: string; isCompleted: boolean }>
-    // ) => {
-    //   const index = state.taskItems.findIndex((task) => task.id === payload.id);
-
-    //   if (index !== -1) {
-    //     state.taskItems[index].isCompleted = payload.isCompleted;
-    //   }
-    // },
-    // DeleteTask: (state, { payload }: PayloadAction<string>) => {
-    //   state.taskItems = state.taskItems.filter((task) => task.id !== payload);
-    // },
-    // UpdateTask: (state, { payload }: PayloadAction<TaskItems>) => {
-    //   const index = state.taskItems.findIndex((task) => task.id === payload.id);
-    //   if (index !== -1) {
-    //     state.taskItems[index] = payload;
-    //   }
-    // },
+    setValidPagesId: (state, { payload }: PayloadAction<ArticleResult[]>) => {
+      state.articles = payload;
+    },
   },
 });
 
@@ -89,15 +56,4 @@ export const FetchPopularArticles =
     }
   };
 
-export const FilterPopularArticleById =
-  (id: number): AppThunk =>
-  async (dispatch) => {
-    dispatch(setStatus("loading"));
-    try {
-      // dispatch(filterArticle({ id }));
-      dispatch(setStatus("data"));
-    } catch {
-      dispatch(setStatus("error"));
-    }
-  };
 export default ArticleSlice;
