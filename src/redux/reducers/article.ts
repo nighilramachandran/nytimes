@@ -29,13 +29,13 @@ const ArticleSlice = createSlice({
     setArticles: (state, { payload }: PayloadAction<ArticleResult[]>) => {
       state.articles = payload;
     },
-    setValidPagesId: (state, { payload }: PayloadAction<ArticleResult[]>) => {
-      state.articles = payload;
+    setValidPagesId: (state, { payload }: PayloadAction<number[]>) => {
+      state.validPagesId = payload;
     },
   },
 });
 
-export const { setStatus, setArticles } = ArticleSlice.actions;
+export const { setStatus, setArticles, setValidPagesId } = ArticleSlice.actions;
 
 export const FetchPopularArticles =
   (param: string): AppThunk =>
@@ -47,6 +47,8 @@ export const FetchPopularArticles =
       );
       if (data.status === "OK") {
         dispatch(setArticles(data?.results));
+        const pageIds = data.results.map((result) => result.id);
+        dispatch(setValidPagesId(pageIds));
         dispatch(setStatus("data"));
       } else {
         dispatch(setStatus("error"));
