@@ -12,7 +12,7 @@
 
 ## Overview
 
-This React application utilizes Material-UI (MUI) for its UI components and styling, while TypeScript enhances type safety throughout the codebase.
+This React application is built using Material-UI (MUI) for its UI components and styling, TypeScript for enhanced type safety, Redux for state management, and Axios for handling HTTP requests.
 
 ## Description
 
