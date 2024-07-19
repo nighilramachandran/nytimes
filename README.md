@@ -4,18 +4,23 @@
 
 ## :point_right: :point_right: :point_right: :point_right: INDEX :point_left: :point_left: :point_left: :point_left:
 
-1. [Description](#description)
-2. [Installation](#installation)
-3. [ENV file sample ](#env-file-sample)
-4. [Ports required](#ports-required)
+1. [overview](#overview)
+2. [Description](#description)
+3. [Installation](#installation)
+4. [ENV file sample ](#env-file-sample)
+5. [Ports required](#ports-required)
 
-## 1. Description
+## Overview
+
+This React application utilizes Material-UI (MUI) for its UI components and styling, while TypeScript enhances type safety throughout the codebase.
+
+## Description
 
 This project is a React application that fetches articles from the New York Times API and dynamically displays them. Users can browse through a list of articles fetched in real-time from the API. Clicking on an article navigates the user to a detailed page dedicated to that specific article, where they can read more about it, view related media, and explore additional details provided by the New York Times.
 
 The application provides a seamless user experience by leveraging React's component-based architecture and state management capabilities. It aims to showcase how to integrate external APIs into a React application and handle dynamic routing for detailed content pages.
 
-## 2. Installation
+## Installation
 
 ### :point_right: Local setup
 
@@ -34,13 +39,13 @@ Update the variables in the file and proceed to further steps. its mandatory to 
 
 ```
 
-## 3. ENV file sample
+## ENV file sample
 
 | Variable Name     | Description                                                                                          |
 | ----------------- | ---------------------------------------------------------------------------------------------------- |
 | REACT_APP_API_KEY | Environment variable used in your React application to securely access and authenticate with an API. |
 
-## :point_right: 4. Ports required
+## Ports required
 
 | Ports required | Is required on deployment | Is required on development |
 | -------------- | ------------------------- | -------------------------- |
