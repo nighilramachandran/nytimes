@@ -39,15 +39,15 @@ Update the variables in the file and proceed to further steps. its mandatory to 
 
 ```
 
-4. cd into the folder
+4. Navigate into the folder
 
 `cd nytimes`
 
-5. install packages
+5. Install packages
 
 `npm install`
 
-6. run the project
+6. Run the project
 
 `npm start`
 
