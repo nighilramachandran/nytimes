@@ -4,7 +4,7 @@
 
 ## :point_right: :point_right: :point_right: :point_right: INDEX :point_left: :point_left: :point_left: :point_left:
 
-1. [overview](#overview)
+1. [Overview](#overview)
 2. [Description](#description)
 3. [Installation](#installation)
 4. [ENV file sample ](#env-file-sample)
@@ -38,6 +38,20 @@ NOTE: please rename sample.local.env to .env.local;
 Update the variables in the file and proceed to further steps. its mandatory to set the enviroment variables before we get into further steps.
 
 ```
+
+4. cd into the folder
+
+`cd nytimes`
+
+5. install packages
+
+`npm install`
+
+6. run the project
+
+`npm start`
+
+:rocket: :rocket: start browsing the application on localhost:3000 :rocket: :rocket:
 
 ## ENV file sample
 
