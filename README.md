@@ -31,6 +31,7 @@ The application provides a seamless user experience by leveraging React's compon
 NOTE: please rename sample.local.env to .env.local;
 
 Update the variables in the file and proceed to further steps. its mandatory to set the enviroment variables before we get into further steps.
+
 ```
 
 ## 3. ENV file sample
