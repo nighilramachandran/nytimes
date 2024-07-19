@@ -1,12 +1,13 @@
-## PROJECT NAME : NY TIMES
+## PROJECT NY TIMES
 
 # Contents
 
 ## :point_right: :point_right: :point_right: :point_right: INDEX :point_left: :point_left: :point_left: :point_left:
 
 1. [Description](#description)
-2. [Ports required](#ports-required)
+2. [Installation](#installation)
 3. [ENV file sample ](#env-file-sample)
+4. [Ports required](#ports-required)
 
 ```
 NOTE: please change sample.local.env to .env.local;
@@ -19,6 +20,16 @@ Update the variables in the file and proceed to further steps. its mandatory to 
 This project is a React application that fetches articles from the New York Times API and dynamically displays them. Users can browse through a list of articles fetched in real-time from the API. Clicking on an article navigates the user to a detailed page dedicated to that specific article, where they can read more about it, view related media, and explore additional details provided by the New York Times.
 
 The application provides a seamless user experience by leveraging React's component-based architecture and state management capabilities. It aims to showcase how to integrate external APIs into a React application and handle dynamic routing for detailed content pages.
+
+## 2. Installation
+
+### :point_right: Local setup
+
+1. Install latest node js based on your operating system
+
+2. Clone from git repository
+
+`git clone https://github.com/nighilramachandran/nytimes.git`
 
 ## :point_right: 1. Ports required
 
