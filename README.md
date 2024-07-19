@@ -8,8 +8,14 @@
 ```
 NOTE: please change sample.local.env to .env.local;
 
-Update the variables in the file and then only proceede to further steps. its mandatory to set the enviroment variables before we get into further steps.
+Update the variables in the file and proceed to further steps. its mandatory to set the enviroment variables before we get into further steps.
 ```
+
+## :point_right: 1. Ports required
+
+| Ports required | Is required on deployment | Is required on development |
+| -------------- | ------------------------- | -------------------------- |
+| 3000           | No                        | Yes                        |
 
 # Getting Started with Create React App
 
