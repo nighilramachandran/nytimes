@@ -38,7 +38,7 @@ const DynamicPage: React.FC = () => {
       );
       setFilteredArticle(filteredArt);
     }
-  }, [articles, id, validPagesId, navigate]);
+  }, [articles, id, validPagesId, navigate, PAGE_NOT_FOUND]);
 
   return (
     <Box component={MotionViewport}>
