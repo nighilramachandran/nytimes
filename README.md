@@ -9,7 +9,7 @@
 3. [ENV file sample ](#env-file-sample)
 4. [Ports required](#ports-required)
 
-## :point_right: 1. Description
+## 1. Description
 
 This project is a React application that fetches articles from the New York Times API and dynamically displays them. Users can browse through a list of articles fetched in real-time from the API. Clicking on an article navigates the user to a detailed page dedicated to that specific article, where they can read more about it, view related media, and explore additional details provided by the New York Times.
 
