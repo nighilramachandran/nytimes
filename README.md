@@ -1,15 +1,20 @@
+## NY TIMES
+
 # Contents
 
 ## :point_right: :point_right: :point_right: :point_right: INDEX :point_left: :point_left: :point_left: :point_left:
 
-1. [Ports required](#ports-required)
-2. [ENV file sample ](#env-file-sample)
+1. [Description](#description)
+2. [Ports required](#ports-required)
+3. [ENV file sample ](#env-file-sample)
 
 ```
 NOTE: please change sample.local.env to .env.local;
 
 Update the variables in the file and proceed to further steps. its mandatory to set the enviroment variables before we get into further steps.
 ```
+
+## :point_right: 1. Ports required
 
 ## :point_right: 1. Ports required
 
