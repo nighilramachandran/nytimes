@@ -1,4 +1,4 @@
-## NY TIMES
+## PROJECT NAME : NY TIMES
 
 # Contents
 
@@ -14,7 +14,11 @@ NOTE: please change sample.local.env to .env.local;
 Update the variables in the file and proceed to further steps. its mandatory to set the enviroment variables before we get into further steps.
 ```
 
-## :point_right: 1. Ports required
+## :point_right: 1. Description
+
+This project is a React application that fetches articles from the New York Times API and dynamically displays them. Users can browse through a list of articles fetched in real-time from the API. Clicking on an article navigates the user to a detailed page dedicated to that specific article, where they can read more about it, view related media, and explore additional details provided by the New York Times.
+
+The application provides a seamless user experience by leveraging React's component-based architecture and state management capabilities. It aims to showcase how to integrate external APIs into a React application and handle dynamic routing for detailed content pages.
 
 ## :point_right: 1. Ports required
 
