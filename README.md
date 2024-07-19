@@ -1,4 +1,4 @@
-## PROJECT NY TIMES
+## NY TIMES
 
 # Contents
 
@@ -8,12 +8,6 @@
 2. [Installation](#installation)
 3. [ENV file sample ](#env-file-sample)
 4. [Ports required](#ports-required)
-
-```
-NOTE: please change sample.local.env to .env.local;
-
-Update the variables in the file and proceed to further steps. its mandatory to set the enviroment variables before we get into further steps.
-```
 
 ## :point_right: 1. Description
 
@@ -30,6 +24,14 @@ The application provides a seamless user experience by leveraging React's compon
 2. Clone from git repository
 
 `git clone https://github.com/nighilramachandran/nytimes.git`
+
+3. Rename sample.local.env to .env.local
+
+```
+NOTE: please rename sample.local.env to .env.local;
+
+Update the variables in the file and proceed to further steps. its mandatory to set the enviroment variables before we get into further steps.
+```
 
 ## :point_right: 1. Ports required
 
