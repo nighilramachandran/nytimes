@@ -1,3 +1,16 @@
+# Contents
+
+## :point_right: :point_right: :point_right: :point_right: INDEX :point_left: :point_left: :point_left: :point_left:
+
+1. [Ports required](#ports-required)
+2. [ENV file sample ](#env-file-sample)
+
+```
+NOTE: please change sample.local.env to .env.local;
+
+Update the variables in the file and then only proceede to further steps. its mandatory to set the enviroment variables before we get into further steps.
+```
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
