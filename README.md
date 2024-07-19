@@ -33,7 +33,13 @@ NOTE: please rename sample.local.env to .env.local;
 Update the variables in the file and proceed to further steps. its mandatory to set the enviroment variables before we get into further steps.
 ```
 
-## :point_right: 1. Ports required
+## 3. ENV file sample
+
+| Variable Name     | Description                                                                                          |
+| ----------------- | ---------------------------------------------------------------------------------------------------- |
+| REACT_APP_API_KEY | Environment variable used in your React application to securely access and authenticate with an API. |
+
+## :point_right: 4. Ports required
 
 | Ports required | Is required on deployment | Is required on development |
 | -------------- | ------------------------- | -------------------------- |
