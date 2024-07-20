@@ -1,6 +1,6 @@
 describe("Home Page spec", () => {
   beforeEach(() => {
-    cy.visit("http://localhost:3000");
+    cy.visit("/");
   });
   // background color exist
   it("should have background color #101010", () => {
