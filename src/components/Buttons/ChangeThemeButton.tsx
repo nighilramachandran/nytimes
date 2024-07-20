@@ -1,5 +1,5 @@
 import { FormControlLabel, styled, Switch } from "@mui/material";
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { ThemeContext } from "../../context/Theme";
 
 export const ChangeThemeButton: React.FC = () => {
@@ -7,19 +7,17 @@ export const ChangeThemeButton: React.FC = () => {
 
   // handle change
   const handleChange = () => {
+    const newMode = themeMode === "light" ? "dark" : "light";
+    localStorage.setItem("mode", newMode);
     setThemeMode();
   };
-
-  // effects
-  useEffect(() => {
-    localStorage?.setItem("mode", themeMode);
-  }, [themeMode]);
 
   return (
     <FormControlLabel
       onChange={() => handleChange()}
       control={<MaterialUISwitch sx={{ m: 1 }} />}
       label=""
+      data-testid="change-theme-form-control"
     />
   );
 };

@@ -30,13 +30,17 @@ const Home: React.FC = () => {
   };
 
   return (
-    <LoadingBox status={status === "data" ? "data" : "loading"}>
+    <LoadingBox
+      status={status === "data" ? "data" : "loading"}
+      data-testid="loading-box"
+    >
       <Grid container spacing={3}>
         <Grid item sx={{ marginLeft: "auto" }}>
           <CustomSelect
             options={periods}
             defaultOption={defaultPeriod}
             optionChange={(val) => handleOptionChange(val)}
+            data-testid="custome-select"
           />
         </Grid>
         <Grid item>

@@ -8,6 +8,7 @@ const NyLogo: React.FC = () => {
 
   return (
     <svg
+      data-testid="ny-logo"
       viewBox="0 0 184 25"
       fill={`${mode === "dark" ? "#FFFFFF" : "#000000"}`}
       aria-hidden="true"

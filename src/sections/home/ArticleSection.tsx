@@ -33,7 +33,7 @@ const ArticleSection: React.FC<articleSectionProps> = ({ articles }) => {
   return (
     <Grid container gap={5}>
       {articles?.length > 0 &&
-        articles?.map((art) => {
+        articles?.map((art, index) => {
           const data = art?.media?.[0]?.["media-metadata"]?.[2];
 
           return (
@@ -43,6 +43,7 @@ const ArticleSection: React.FC<articleSectionProps> = ({ articles }) => {
               key={art.id}
               sx={{ cursor: "pointer" }}
               onClick={() => goToPage(art.id.toString())}
+              data-testid={`article-index-${index}`}
             >
               <Paper variant="outlined">
                 <Grid container spacing={2}>

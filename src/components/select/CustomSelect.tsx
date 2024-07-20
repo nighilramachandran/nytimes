@@ -25,16 +25,26 @@ const CustomSelect: React.FC<customSlectProps> = ({
     optionChange && optionChange(event.target.value as string);
   };
   return (
-    <FormControl sx={{ width: "200px" }}>
-      <InputLabel sx={{ color: "text.primary" }}>Select Time Period</InputLabel>
+    <FormControl sx={{ width: "200px" }} data-testid="form-control">
+      <InputLabel
+        sx={{ color: "text.primary" }}
+        data-testid="form-control-label"
+      >
+        Select Time Period
+      </InputLabel>
       <Select
         value={defaultOption}
         className="outlined-gradient"
         onChange={(e) => handleSelectChange(e)}
+        data-testid="form-control-select"
       >
-        {options?.map((option) => {
+        {options?.map((option, index) => {
           return (
-            <MenuItem key={option} value={option}>
+            <MenuItem
+              key={option}
+              value={option}
+              data-testid={`"form-control-select-menu-item-${index}"`}
+            >
               {option}
             </MenuItem>
           );
