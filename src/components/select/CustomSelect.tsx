@@ -25,7 +25,7 @@ const CustomSelect: React.FC<customSlectProps> = ({
     optionChange && optionChange(event.target.value as string);
   };
   return (
-    <FormControl sx={{ width: "200px" }} data-testid="form-control">
+    <FormControl sx={{ width: "200px" }} data-testid="form-control-select">
       <InputLabel
         sx={{ color: "text.primary" }}
         data-testid="form-control-label"

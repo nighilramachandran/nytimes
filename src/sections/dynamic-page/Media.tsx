@@ -19,7 +19,12 @@ const DynamicPageMedia: React.FC<mediaProps> = ({ mediaurl }) => {
     <>
       {mediaurl && (
         <m.div variants={varFade().inUp}>
-          <img src={mediaurl} alt="" style={{ ...imageStyles }} />
+          <img
+            src={mediaurl}
+            alt=""
+            style={{ ...imageStyles }}
+            data-testid="image"
+          />
         </m.div>
       )}
     </>

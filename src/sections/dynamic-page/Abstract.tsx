@@ -12,7 +12,9 @@ interface abstractProps {
 const AbstractDynamic: React.FC<abstractProps> = ({ abstract }) => {
   return (
     <m.div variants={varFade().inUp}>
-      <Typography variant="body1">{abstract.abstract}</Typography>
+      <Typography variant="body1" data-testid="abstract">
+        {abstract.abstract}
+      </Typography>
     </m.div>
   );
 };

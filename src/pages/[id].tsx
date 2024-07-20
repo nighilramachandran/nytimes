@@ -42,7 +42,10 @@ const DynamicPage: React.FC = () => {
 
   return (
     <Box component={MotionViewport}>
-      <LoadingBox status={status === "data" ? "data" : "loading"}>
+      <LoadingBox
+        status={status === "data" ? "data" : "loading"}
+        data-testid="dynamic-page-loading-box"
+      >
         {filteredArticle?.map((article) => {
           const mediaDataUrl = article.media?.[0]["media-metadata"]?.[2].url;
           return (
