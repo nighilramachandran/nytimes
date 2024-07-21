@@ -5,11 +5,11 @@ import { varFade } from "../../components/animate/variants";
 import { Typography } from "@mui/material";
 
 // interface
-interface abstractProps {
+interface AbstractProps {
   abstract: ArticleResult;
 }
 
-const AbstractDynamic: React.FC<abstractProps> = ({ abstract }) => {
+const AbstractDynamic: React.FC<AbstractProps> = ({ abstract }) => {
   return (
     <m.div variants={varFade().inUp}>
       <Typography variant="body1" data-testid="abstract">

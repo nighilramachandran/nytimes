@@ -22,7 +22,7 @@ const CustomSelect: React.FC<CustomSlectProps> = ({
   // functions
 
   const handleSelectChange = (event: SelectChangeEvent) => {
-    optionChange && optionChange(event.target.value as string);
+    optionChange && optionChange(event.target.value);
   };
   return (
     <FormControl sx={{ width: "200px" }} data-testid="form-control-select">

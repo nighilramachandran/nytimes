@@ -3,7 +3,7 @@ import { varFade } from "../../components/animate/variants";
 import { m } from "framer-motion";
 
 // interface
-interface mediaProps {
+interface MediaProps {
   mediaurl: string;
 }
 
@@ -14,7 +14,7 @@ const imageStyles: CSSProperties = {
   borderRadius: "6px",
 };
 
-const DynamicPageMedia: React.FC<mediaProps> = ({ mediaurl }) => {
+const DynamicPageMedia: React.FC<MediaProps> = ({ mediaurl }) => {
   return (
     <>
       {mediaurl && (

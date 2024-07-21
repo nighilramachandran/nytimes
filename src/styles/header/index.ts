@@ -2,7 +2,7 @@ import { Theme } from "@emotion/react";
 import { SxProps } from "@mui/material";
 import { HEADER_SPACINGS } from "../../utils/config";
 import { CSSProperties } from "react";
-import { headerStylesProps } from "../../interfaces";
+import { HeaderStylesProps } from "../../interfaces";
 
 // AppBar
 export const appBarStyles: SxProps<Theme> = {
@@ -13,7 +13,7 @@ export const appBarStyles: SxProps<Theme> = {
 };
 
 // Toolbar
-export const headerStyles: headerStylesProps = {
+export const headerStyles: HeaderStylesProps = {
   height: {
     xs: HEADER_SPACINGS.H_MOBILE,
     md: HEADER_SPACINGS.H_MAIN_DESKTOP,

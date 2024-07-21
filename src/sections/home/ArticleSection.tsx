@@ -4,7 +4,7 @@ import { Grid, Paper, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
 // interfaces
-interface articleSectionProps {
+interface ArticleSectionProps {
   articles: ArticleResult[];
 }
 
@@ -22,7 +22,7 @@ const gridItemScripts: CSSProperties = {
 };
 
 // article section
-const ArticleSection: React.FC<articleSectionProps> = ({ articles }) => {
+const ArticleSection: React.FC<ArticleSectionProps> = ({ articles }) => {
   // navigate
   const navigate = useNavigate();
 
@@ -61,15 +61,15 @@ const ArticleSection: React.FC<articleSectionProps> = ({ articles }) => {
 // components
 
 // interfaces
-interface gridItemImageProps {
+interface GridItemImageProps {
   mediaData: MediaMetadata;
 }
-interface scriptItemProps {
+interface ScriptItemProps {
   script: ArticleResult;
 }
 
 // media
-const GridItemImage = ({ mediaData }: gridItemImageProps) => {
+const GridItemImage = ({ mediaData }: GridItemImageProps) => {
   return (
     <Grid item xs={12} md={5} sx={{ ...gridItemImageStyles }}>
       {mediaData?.url && (
@@ -90,7 +90,7 @@ const GridItemImage = ({ mediaData }: gridItemImageProps) => {
 };
 
 // scripts
-const GridItemScripts = ({ script }: scriptItemProps) => {
+const GridItemScripts = ({ script }: ScriptItemProps) => {
   return (
     <Grid item xs={12} md={7}>
       <Stack sx={{ ...gridItemScripts }}>

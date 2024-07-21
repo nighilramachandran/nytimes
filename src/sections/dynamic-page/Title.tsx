@@ -5,10 +5,10 @@ import { varFade } from "../../components/animate/variants";
 import { ArticleResult } from "../../interfaces";
 
 // interface
-interface titleProps {
+interface TitleProps {
   titles: ArticleResult;
 }
-const DynamicPageTitle: React.FC<titleProps> = ({ titles }) => {
+const DynamicPageTitle: React.FC<TitleProps> = ({ titles }) => {
   return (
     <>
       <m.div variants={varFade().inUp}>
