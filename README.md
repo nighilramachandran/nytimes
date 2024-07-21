@@ -9,7 +9,11 @@
 3. [Installation](#installation)
 4. [ENV file sample ](#env-file-sample)
 5. [Ports required](#ports-required)
-6. [Running Tests](#running-test)
+6. [Running Cypress Tests](#running-cypress-test)
+7. [Jest Unit Testing](#just-unit-test)
+8. [Setting Up SonarQube](#setting-sonarqube)
+9. [Running SonarQube Analysis](#sonarqube-analysis)
+10. [Build Application](#build-app)
 
 ## Overview
 
@@ -74,8 +78,6 @@ npm start
 | -------------- | ------------------------- | -------------------------- |
 | 3000           | No                        | Yes                        |
 
-# Running Tests
-
 ```
 NOTE: Please run the application before you start running the test
 
@@ -117,7 +119,7 @@ This command executes Cypress tests in the background without launching a browse
 
 ![cypress-headless](/public/assets/images/cypress-headless.png)
 
-### :point_right: Jest Testing
+### :point_right: Jest Unit Testing
 
 1. Open your terminal.
 
@@ -147,6 +149,30 @@ npm run test
 2. Access SonarQube Web Interface by
 
    - Open your browser and go to [http://localhost:9000](http://localhost:9000).
+
+3. Create a New Project
+
+   - Click on "Create new project" and follow the prompts to create a new project in SonarQube.
+
+4. Generate and Copy the Project Token
+
+   - After creating the project, generate a token and copy it. This token is used for authentication during analysis.
+
+### Running SonarQube Analysis
+
+To run the SonarQube scanner and analyze your project locally:
+
+1. Open your terminal.
+
+2. Run the following command, replacing `your_project_key`, `your_sonar_token`, and adjusting other parameters as needed:
+
+   ```
+   sonar-scanner \
+     -Dsonar.projectKey=your_project_key \
+     -Dsonar.sources=. \
+     -Dsonar.host.url=http://localhost:9000 \
+     -Dsonar.login=your_sonar_token
+   ```
 
 ### `npm run build`
 
