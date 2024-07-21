@@ -140,6 +140,14 @@ npm run test
 
 ![cypress-headless](/public/assets/images/jest-test.png)
 
+### :point_right: Setting Up SonarQube
+
+1. Start SonarQube Services
+
+2. Access SonarQube Web Interface by
+
+   - Open your browser and go to [http://localhost:9000](http://localhost:9000).
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
