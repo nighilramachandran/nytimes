@@ -1,38 +1,38 @@
 import { createTheme, ThemeProvider } from "@mui/material";
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { ReactNode, useEffect, useMemo, useState } from "react";
 import darkThemeOptions from "../styles/theme/DarkTheme";
 import { ThemeContext } from "../context/Theme";
 import lightThemeOptions from "../styles/theme/LightTheme";
 
-// interfaces
+// Interfaces
 interface ThemeProviderProps {
   children: ReactNode;
 }
 
-// create theme
-
-// dark
+// Create themes
 const darkTheme = createTheme(darkThemeOptions);
 const lightTheme = createTheme(lightThemeOptions);
 
 const ThemeProviders: React.FC<ThemeProviderProps> = ({ children }) => {
-  // states
-  // theme
-  const [theme, setTheme] = useState("dark");
+  // State
+  const [theme, setTheme] = useState<string>(
+    () => localStorage.getItem("mode") || "dark"
+  );
 
-  // variables
-  let directionTheme = theme === "dark" ? darkTheme : lightTheme;
+  // Memoized theme object
+  const directionTheme = useMemo(() => {
+    return theme === "dark" ? darkTheme : lightTheme;
+  }, [theme]);
 
-  // functions
-  // Toggle Theme
+  // Toggle Theme function
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
-  // effects
+  // Effects
   useEffect(() => {
-    setTheme(localStorage?.getItem("mode") ?? "dark");
-  }, []);
+    localStorage.setItem("mode", theme);
+  }, [theme]);
 
   return (
     <ThemeProvider theme={directionTheme}>
