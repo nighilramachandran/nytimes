@@ -1,10 +1,10 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import CustomSelect, { customSlectProps } from "../select/CustomSelect";
+import CustomSelect, { CustomSlectProps } from "../select/CustomSelect";
 import "@testing-library/jest-dom/extend-expect";
 
 // Mock props for testing
-const mockProps: customSlectProps = {
+const mockProps: CustomSlectProps = {
   options: ["Option 1", "Option 2", "Option 3"],
   defaultOption: "Option 1",
   optionChange: jest.fn(), // Mock function

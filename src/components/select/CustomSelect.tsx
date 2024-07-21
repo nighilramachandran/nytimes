@@ -8,13 +8,13 @@ import {
 import React from "react";
 
 // interfaces
-export interface customSlectProps {
+export interface CustomSlectProps {
   options: string[];
   defaultOption: string;
   optionChange: (val: string) => void;
 }
 
-const CustomSelect: React.FC<customSlectProps> = ({
+const CustomSelect: React.FC<CustomSlectProps> = ({
   options,
   defaultOption,
   optionChange,
