@@ -31,7 +31,10 @@ The application provides a seamless user experience by leveraging React's compon
 
 2. Clone from git repository
 
-`git clone https://github.com/nighilramachandran/nytimes.git`
+```
+git clone https://github.com/nighilramachandran/nytimes.git`
+
+```
 
 3. Rename sample.local.env to .env.local
 
@@ -107,9 +110,7 @@ This command executes Cypress tests in the background without launching a browse
 
 ![cypress-headless](/public/assets/images/cypress-headless.png)
 
-### :point_right: Running Cypress Tests
-
-### Jest Testing
+### :point_right: Jest Testing
 
 1. Open your terminal.
 
