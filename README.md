@@ -13,7 +13,7 @@
 7. [Jest Unit Testing](#just-unit-test)
 8. [Setting Up SonarQube](#setting-sonarqube)
 9. [Running SonarQube Analysis](#sonarqube-analysis)
-10. [Build Application](#build-app)
+10. [Building and Running the Project](#build-app)
 
 ## Overview
 
@@ -82,6 +82,8 @@ npm start
 NOTE: Please run the application before you start running the test
 
 ```
+
+### Running Tests
 
 ### :point_right: Running Cypress Tests
 
@@ -174,16 +176,40 @@ To run the SonarQube scanner and analyze your project locally:
      -Dsonar.login=your_sonar_token
    ```
 
-3. Go the localhost:9000 and select the create project to see results similar to the following.
+3. Go the localhost:9000 and select the created project to see results similar to the following.
 
 ![sonar-qube](/public/assets/images/sonar-qube.png)
 
-### `npm run build`
+## Building and Running the Project
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Building the Project
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Open your terminal.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run build
+```
+
+This command compiles your React app into optimized static files in the build folder.
+
+### Running the Build
+
+1. Install a static server if you don't have one already. For example, you can use serve
+
+```
+npm install -g serve
+```
+
+2. Navigate to the build directory
+
+```
+cd build
+```
+
+3. Start the server
+
+```
+serve -p 3000
+```
+
+4. Open your browser and go to http://localhost:3000 to view your React application.
