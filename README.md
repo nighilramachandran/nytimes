@@ -103,16 +103,9 @@ To run tests headlessly (suitable for CI/CD pipelines), use:
 
 `npx cypress run`
 
-This command executes Cypress tests in the background without launching a browser window. It's ideal for automated testing in continuous integration environments.
+This command executes Cypress tests in the background without launching a browser window. It's ideal for automated testing in continuous integration environments.You will find the results similar to the following.
 
 ![cypress-headless](/public/assets/images/cypress-headless.png)
-
-### Explanation:
-
-- **Markdown Structure**: Use headings (`### Headless Mode`) to organize different sections of instructions clearly.
-- **Command Execution**: Provide the command (`npx cypress run`) in a code block for clarity and direct execution.
-- **Image Inclusion**: Embed the image (`cypress-headless.png`) with a relative path (`/public/assets/images/cypress-headless.png`) from your `public` folder. Ensure the path is correct relative to the root of your project.
-- **Description**: Use the image caption to describe what the image depicts, such as the output or result you expect when running Cypress tests in headless mode.
 
 ### :point_right: Running Cypress Tests
 
