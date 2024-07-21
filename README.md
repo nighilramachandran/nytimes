@@ -37,12 +37,12 @@ git clone https://github.com/nighilramachandran/nytimes.git`
 
 3. Rename sample.local.env to .env.local
 
-`
+```
 NOTE: Please rename sample.local.env to .env.local;
 
 Update the variables in the file and proceed to further steps. its mandatory to set the enviroment variables before we get into further steps.
 
-`
+```
 
 4. Navigate into the folder
 
@@ -50,11 +50,15 @@ Update the variables in the file and proceed to further steps. its mandatory to 
 
 5. Install packages
 
-`npm install`
+```
+npm install
+```
 
 6. Run the project
 
-`npm start`
+```
+npm start
+```
 
 :rocket: :rocket: start browsing the application on localhost:3000 :rocket: :rocket:
 
@@ -85,7 +89,9 @@ NOTE: Please run the application before you start running the test
 
 2. Type the following command and press Enter:
 
-`npx cypress open`
+```
+npx cypress open
+```
 
 This will launch the Cypress Test Runner.
 
@@ -103,7 +109,9 @@ To run tests headlessly (suitable for CI/CD pipelines), use:
 
 2. Type the following command and press Enter:
 
-`npx cypress run`
+```
+npx cypress run
+```
 
 This command executes Cypress tests in the background without launching a browser window. It's ideal for automated testing in continuous integration environments.You will find the results similar to the following.
 
@@ -115,7 +123,9 @@ This command executes Cypress tests in the background without launching a browse
 
 2. Type the following command and press Enter:
 
-`npm run test`
+```
+npm run test
+```
 
 3. Choose the Watch usage by pressing the available option as shown below
 
