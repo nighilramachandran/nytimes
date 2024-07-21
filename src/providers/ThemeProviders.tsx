@@ -16,7 +16,7 @@ const lightTheme = createTheme(lightThemeOptions);
 const ThemeProviders: React.FC<ThemeProviderProps> = ({ children }) => {
   // State
   const [theme, setTheme] = useState<string>(
-    () => localStorage.getItem("mode") || "dark"
+    () => localStorage.getItem("mode") ?? "dark"
   );
 
   // Memoized theme object

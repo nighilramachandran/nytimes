@@ -9,10 +9,13 @@
 3. [Installation](#installation)
 4. [ENV file sample ](#env-file-sample)
 5. [Ports required](#ports-required)
+6. [Running Tests](#running-test)
 
 ## Overview
 
-This React application is built using Material-UI (MUI) for its UI components and styling, TypeScript for enhanced type safety, Redux for state management, and Axios for handling HTTP requests.
+This React application uses Material-UI (MUI) for UI components and styling, TypeScript for type safety, Redux for state management, and Axios for HTTP requests. Cypress handles UI testing for comprehensive end-to-end tests, while Jest ensures unit components and functions behave as expected.
+
+SonarQube is integrated to maintain high code quality, analyzing for bugs, vulnerabilities, and code issues, ensuring best practices are followed.
 
 ## Description
 
@@ -64,6 +67,29 @@ Update the variables in the file and proceed to further steps. its mandatory to 
 | Ports required | Is required on deployment | Is required on development |
 | -------------- | ------------------------- | -------------------------- |
 | 3000           | No                        | Yes                        |
+
+# Running Tests
+
+```
+NOTE: Please run the application before you start running the test
+
+```
+
+### :point_right: Running Cypress Tests
+
+1. Open your terminal.
+
+2. Type the following command and press Enter:
+
+`npx cypress open`
+
+This will launch the Cypress Test Runner.
+
+3. In the Cypress Test Runner window:
+
+   - Choose "e2e" testing, which is pre-configured for this app.
+   - Select your preferred browser from the dropdown menu.
+   - Click on a spec file under cypress/integration to start running tests for each page.
 
 # Getting Started with Create React App
 
