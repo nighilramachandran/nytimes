@@ -174,6 +174,10 @@ To run the SonarQube scanner and analyze your project locally:
      -Dsonar.login=your_sonar_token
    ```
 
+3. Go the localhost:9000 and select the create project to see results similar to the following.
+
+![sonar-qube](/public/assets/images/sonar-qube.png)
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
