@@ -33,7 +33,6 @@ The application provides a seamless user experience by leveraging React's compon
 
 ```
 git clone https://github.com/nighilramachandran/nytimes.git`
-
 ```
 
 3. Rename sample.local.env to .env.local
