@@ -8,7 +8,7 @@ import {
 import React from "react";
 
 // interfaces
-interface customSlectProps {
+export interface customSlectProps {
   options: string[];
   defaultOption: string;
   optionChange: (val: string) => void;
