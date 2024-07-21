@@ -105,6 +105,8 @@ To run tests headlessly (suitable for CI/CD pipelines), use:
 
 This command executes Cypress tests in the background without launching a browser window. It's ideal for automated testing in continuous integration environments.
 
+![cypress-headless](/public/assets/images/cypress-headless.png)
+
 ### :point_right: Running Cypress Tests
 
 ### Jest Testing
