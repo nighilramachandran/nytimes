@@ -119,12 +119,12 @@ This command executes Cypress tests in the background without launching a browse
 
 3. Choose the Watch usage by pressing the available option as shown below
 
-› Press a to run all tests.
-› Press f to run only failed tests.
-› Press q to quit watch mode.
-› Press p to filter by a filename regex pattern.
-› Press t to filter by a test name regex pattern.
-› Press Enter to trigger a test run.
+- ›Press a to run all tests.
+- › Press f to run only failed tests.
+- › Press q to quit watch mode.
+- › Press p to filter by a filename regex pattern.
+- › Press t to filter by a test name regex pattern.
+- › Press Enter to trigger a test run.
 
 ### `npm run build`
 
