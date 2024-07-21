@@ -8,15 +8,14 @@ import CircularProgress from "@mui/material/CircularProgress";
 import ErrorOutline from "@mui/icons-material/ErrorOutline";
 import { RequestStatus } from "../../interfaces";
 
-interface props {
+interface Props {
   status?: RequestStatus;
   isLoading?: boolean;
-  data?: any | any[];
   emptyMessage?: React.ReactNode;
 }
 
-export const LoadingBox: React.FC<props & BoxProps> = (props) => {
-  const { status, isLoading, data, emptyMessage, children, ...rest } = props;
+export const LoadingBox: React.FC<Props & BoxProps> = (props) => {
+  const { status, isLoading, emptyMessage, children, ...rest } = props;
   const default_props = useMemo(
     () => ({
       display: "flex",
@@ -28,31 +27,19 @@ export const LoadingBox: React.FC<props & BoxProps> = (props) => {
     [rest]
   );
 
-  if (status) {
-    if (status === "error") {
-      return (
-        <Box {...default_props}>
-          <Stack alignItems={"center"} spacing={2}>
-            <ErrorOutline color="error" fontSize="large" />
-            <Typography color="error">somthing_went_wrong"</Typography>
-          </Stack>
-        </Box>
-      );
-    }
+  if (status === "error") {
+    return (
+      <Box {...default_props}>
+        <Stack alignItems={"center"} spacing={2}>
+          <ErrorOutline color="error" fontSize="large" />
+          <Typography color="error">somthing_went_wrong"</Typography>
+        </Stack>
+      </Box>
+    );
+  }
 
-    if (status === "data") {
-      return <Box {...rest}>{children}</Box>;
-    }
-  } else {
-    if (!isLoading) {
-      if (!data || !(data as any[])?.length) {
-        return (
-          <Box {...default_props}>
-            <Typography>{emptyMessage ?? "no_data"}</Typography>
-          </Box>
-        );
-      } else return <Box {...rest}>{children}</Box>;
-    }
+  if (status === "data") {
+    return <Box {...rest}>{children}</Box>;
   }
 
   return (
