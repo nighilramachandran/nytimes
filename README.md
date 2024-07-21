@@ -111,9 +111,20 @@ This command executes Cypress tests in the background without launching a browse
 
 ### Jest Testing
 
-[Jest](https://jestjs.io/) is a delightful JavaScript testing framework with a focus on simplicity. To run Jest tests for your React app:
-
 1. Open your terminal.
+
+2. Type the following command and press Enter:
+
+`npm run test`
+
+3. Choose the Watch usage by pressing the available option as shown below
+
+› Press a to run all tests.
+› Press f to run only failed tests.
+› Press q to quit watch mode.
+› Press p to filter by a filename regex pattern.
+› Press t to filter by a test name regex pattern.
+› Press Enter to trigger a test run.
 
 ### `npm run build`
 
