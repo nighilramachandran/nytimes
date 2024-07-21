@@ -13,7 +13,12 @@ export interface Props extends IProps {
   action?: boolean;
 }
 
-export default function MotionContainer({ animate, action = false, children, ...other }: Props) {
+export default function MotionContainer({
+  animate,
+  action = false,
+  children,
+  ...other
+}: Readonly<Props>) {
   if (action) {
     return (
       <Box
@@ -29,7 +34,14 @@ export default function MotionContainer({ animate, action = false, children, ...
   }
 
   return (
-    <Box component={m.div} initial="initial" animate="animate" exit="exit" variants={varContainer()} {...other}>
+    <Box
+      component={m.div}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={varContainer()}
+      {...other}
+    >
       {children}
     </Box>
   );

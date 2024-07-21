@@ -20,7 +20,7 @@ export default function MotionViewport({
   children,
   disableAnimatedMobile = true,
   ...other
-}: Props) {
+}: Readonly<Props>) {
   const isDesktop = useResponsive("up", "sm");
 
   if (!isDesktop && disableAnimatedMobile) {
