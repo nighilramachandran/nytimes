@@ -178,7 +178,7 @@ To run the SonarQube scanner and analyze your project locally:
 
 3. Go the localhost:9000 and select the created project to see results similar to the following.
 
-![sonar-qube](/public/assets/images/sonar-qube.png)
+![sonar-qube-analysis](/public/assets/images/sonar-qube-analysis.png)
 
 ## Building and Running the Project
 
